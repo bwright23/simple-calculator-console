@@ -1,0 +1,9 @@
+c:\Users\Barry\Desktop\Development\VSCode\FishingLicense\bin\Debug\netcoreapp1.0\FishingLicense.deps.json
+c:\Users\Barry\Desktop\Development\VSCode\FishingLicense\bin\Debug\netcoreapp1.0\FishingLicense.runtimeconfig.json
+c:\Users\Barry\Desktop\Development\VSCode\FishingLicense\bin\Debug\netcoreapp1.0\FishingLicense.runtimeconfig.dev.json
+c:\Users\Barry\Desktop\Development\VSCode\FishingLicense\obj\Debug\netcoreapp1.0\FishingLicense.AssemblyInfo.cs
+C:\Users\Barry\Desktop\Development\VSCode\FishingLicense\bin\Debug\netcoreapp1.0\FishingLicense.dll
+C:\Users\Barry\Desktop\Development\VSCode\FishingLicense\bin\Debug\netcoreapp1.0\FishingLicense.pdb
+C:\Users\Barry\Desktop\Development\VSCode\FishingLicense\obj\Debug\netcoreapp1.0\FishingLicense.dll
+C:\Users\Barry\Desktop\Development\VSCode\FishingLicense\obj\Debug\netcoreapp1.0\FishingLicense.pdb
+C:\Users\Barry\Desktop\Development\VSCode\FishingLicense\obj\Debug\netcoreapp1.0\FishingLicense.csprojResolveAssemblyReference.cache
