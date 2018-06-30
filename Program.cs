@@ -29,6 +29,7 @@ namespace FishingLicense
             src.Models.IOperator multiply = src.CalculateFactory.CreateInstance<src.Logic.OperatorMultiply>();
             multiply.Calculate(minus.Results, add.Results);
             Console.WriteLine("Muliplication: " + multiply.Results);
+            
         }
     }
 }
