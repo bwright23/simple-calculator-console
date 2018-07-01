@@ -50,10 +50,13 @@ namespace FishingLicense
         src.Models.LicenseDecorator dec = new src.Models.Decorators.DeerPermit(huntingLicense);
         dec = new src.Models.Decorators.TurkeyPermit(dec);
         dec = new src.Models.Decorators.MuzzleLoadingPermit(dec);
-        Console.WriteLine(dec.GetName());
 
+        src.Models.aLicenseComponent freshLicense = new src.Models.FreshwaterFishBase();
+        src.Models.LicenseDecorator fresh = new src.Models.Decorators.SnookPermit(freshLicense);
 
-        
+        Console.WriteLine("Total annual licesnse fee for {0} is {1}", dec.GetName().ToString(), dec.GetPrice().ToString());
+        Console.WriteLine("Total annual licesnse fee for {0} is {1}", fresh.GetName().ToString(), fresh.GetPrice().ToString());
+
         }
     }
 }
