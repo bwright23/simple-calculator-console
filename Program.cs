@@ -30,6 +30,19 @@ namespace FishingLicense
             multiply.Calculate(minus.Results, add.Results);
             Console.WriteLine("Muliplication: " + multiply.Results);
             
+            BuildLicense();
+        }
+
+        static void BuildLicense()
+        {
+
+        src.Models.aLicenseComponent huntingLicense = new src.Models.HuntingBase();
+        Console.WriteLine(huntingLicense.GetName());
+
+        src.Models.LicenseDecorator dec = new src.Models.Decorators.DeerPermit(huntingLicense);
+        Console.WriteLine(dec.GetPrice());
+
+        
         }
     }
 }
