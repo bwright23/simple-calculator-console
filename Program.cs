@@ -31,16 +31,27 @@ namespace FishingLicense
             Console.WriteLine("Muliplication: " + multiply.Results);
             
             BuildLicense();
+
+
+            Console.WriteLine(new string('*',25));
+            Console.WriteLine("Enter your age:");
+            var age = Console.ReadLine();
+            src.Models.FishermanBase person = src.CalculateFactory.CreateInstance<src.Models.FishermanBase>();
+            person.Name = "Bwright23";
+            person.StartingAge = int.Parse(age);
+
+            Console.WriteLine("Hello {0} you're age is {1}", person.Name, person.StartingAge);
         }
 
         static void BuildLicense()
         {
 
         src.Models.aLicenseComponent huntingLicense = new src.Models.HuntingBase();
-        Console.WriteLine(huntingLicense.GetName());
-
         src.Models.LicenseDecorator dec = new src.Models.Decorators.DeerPermit(huntingLicense);
-        Console.WriteLine(dec.GetPrice());
+        dec = new src.Models.Decorators.TurkeyPermit(dec);
+        dec = new src.Models.Decorators.MuzzleLoadingPermit(dec);
+        Console.WriteLine(dec.GetName());
+
 
         
         }
