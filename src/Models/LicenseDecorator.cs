@@ -15,7 +15,7 @@ namespace FishingLicense.src.Models
 
          public override string GetName()
         {
-            return string.Format("{0},{1}", _license.GetName(), _name);
+            return string.Format("{0}, {1}", _license.GetName(), _name);
         }
 
          public override double GetPrice()
