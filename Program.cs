@@ -71,7 +71,7 @@ namespace FishingLicense
                 price +=  entry.Value.GetPrice();
                 t = entry.Key.ToString();
                 
-                Console.WriteLine("{0}, {1}", entry.Value.GetName() ,entry.Value.GetPrice());
+                Console.WriteLine("{0}: Cost: ${1}", entry.Value.GetName() ,entry.Value.GetPrice());
             }
             
             totalCost = multiply.Calculate(price, minus.Calculate(person.EndingAge, person.StartingAge));
