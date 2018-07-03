@@ -1,3 +1,4 @@
+
 namespace FishingLicense.src.Models
 {
     public abstract class LicenseDecorator :aLicenseComponent
