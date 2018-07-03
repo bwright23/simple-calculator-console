@@ -44,7 +44,7 @@ namespace FishingLicense
 
             src.Models.aLicenseComponent saltLicense = new src.Models.SaltWaterFishBase();
             src.Models.LicenseDecorator salt = new src.Models.Decorators.SnookPermit(saltLicense);
-            salt = new src.Models.Decorators.SpinyLobsterPermit(saltLicense);
+            salt = new src.Models.Decorators.SpinyLobsterPermit(salt);
             person.SelectedLicenses.Add(salt.GetType(), salt);
            
         }
