@@ -7,14 +7,38 @@
   "targets": {
     ".NETCoreApp,Version=v1.0": {
       "fishinglicense/1.0.0": {
+        "dependencies": {
+          "Calculator": "1.0.0",
+          "FishingLicenseCore": "1.0.0"
+        },
         "runtime": {
           "FishingLicense.dll": {}
+        }
+      },
+      "calculator/1.0.0": {
+        "runtime": {
+          "Calculator.dll": {}
+        }
+      },
+      "fishinglicensecore/1.0.0": {
+        "runtime": {
+          "FishingLicenseCore.dll": {}
         }
       }
     }
   },
   "libraries": {
     "fishinglicense/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "calculator/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "fishinglicensecore/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

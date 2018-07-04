@@ -2106,6 +2106,32 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "Calculator/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v1.4",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "bin/placeholder/netstandard1.4/Calculator.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/netstandard1.4/Calculator.dll": {}
+        }
+      },
+      "FishingLicenseCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v1.4",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "bin/placeholder/netstandard1.4/FishingLicenseCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/netstandard1.4/FishingLicenseCore.dll": {}
+        }
       }
     }
   },
@@ -6700,10 +6726,22 @@
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._"
       ]
+    },
+    "Calculator/1.0.0": {
+      "type": "project",
+      "path": "../Calculator/Calculator.csproj",
+      "msbuildProject": "../Calculator/Calculator.csproj"
+    },
+    "FishingLicenseCore/1.0.0": {
+      "type": "project",
+      "path": "../FishingLicenseCore/FishingLicenseCore.csproj",
+      "msbuildProject": "../FishingLicenseCore/FishingLicenseCore.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v1.0": [
+      "Calculator >= 1.0.0",
+      "FishingLicenseCore >= 1.0.0",
       "Microsoft.NETCore.App >= 1.1.0"
     ]
   },
@@ -6726,7 +6764,14 @@
       },
       "frameworks": {
         "netcoreapp1.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Barry\\Desktop\\Development\\VSCode\\FishingLicenseCore\\FishingLicenseCore.csproj": {
+              "projectPath": "C:\\Users\\Barry\\Desktop\\Development\\VSCode\\FishingLicenseCore\\FishingLicenseCore.csproj"
+            },
+            "C:\\Users\\Barry\\Desktop\\Development\\VSCode\\Calculator\\Calculator.csproj": {
+              "projectPath": "C:\\Users\\Barry\\Desktop\\Development\\VSCode\\Calculator\\Calculator.csproj"
+            }
+          }
         }
       }
     },

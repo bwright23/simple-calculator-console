@@ -1,13 +1,14 @@
 ﻿using System;
-using FishingLicense;
-using FishingLicense.src;
+using FishingLicenseCore;
+using Calculator;
 using System.Collections.Generic;
 
 namespace FishingLicense
 {
     class Program
     {
-        static src.Models.FishermanBase person = src.CalculateFactory.CreateInstance<src.Models.FishermanBase>();
+        
+        static FishingLicenseCore.src.Models.FishermanBase person = CalculateFactory.CreateInstance<FishingLicenseCore.src.Models.FishermanBase>();
             
         static void Main(string[] args)
         {
@@ -30,21 +31,21 @@ namespace FishingLicense
         static void BuildLicense()
         {
 
-            src.Models.aLicenseComponent huntingLicense = new src.Models.HuntingBase();
-            src.Models.LicenseDecorator dec = new src.Models.Decorators.DeerPermit(huntingLicense);
-            dec = new src.Models.Decorators.TurkeyPermit(dec);
-            dec = new src.Models.Decorators.MuzzleLoadingPermit(dec);
-            dec = new src.Models.Decorators.WMAPermit(dec);
-            dec = new src.Models.Decorators.ArcheryPermit(dec);
-            dec = new src.Models.Decorators.CrossbowPermit(dec);
+            FishingLicenseCore.src.Models.aLicenseComponent huntingLicense = new FishingLicenseCore.src.Models.HuntingBase();
+            FishingLicenseCore.src.Models.LicenseDecorator dec = new FishingLicenseCore.src.Models.Decorators.DeerPermit(huntingLicense);
+            dec = new FishingLicenseCore.src.Models.Decorators.TurkeyPermit(dec);
+            dec = new FishingLicenseCore.src.Models.Decorators.MuzzleLoadingPermit(dec);
+            dec = new FishingLicenseCore.src.Models.Decorators.WMAPermit(dec);
+            dec = new FishingLicenseCore.src.Models.Decorators.ArcheryPermit(dec);
+            dec = new FishingLicenseCore.src.Models.Decorators.CrossbowPermit(dec);
             person.SelectedLicenses.Add(dec.GetType(), dec);
 
-            src.Models.aLicenseComponent freshLicense = new src.Models.FreshwaterFishBase();
+            FishingLicenseCore.src.Models.aLicenseComponent freshLicense = new FishingLicenseCore.src.Models.FreshwaterFishBase();
             person.SelectedLicenses.Add(freshLicense.GetType(), freshLicense);
 
-            src.Models.aLicenseComponent saltLicense = new src.Models.SaltWaterFishBase();
-            src.Models.LicenseDecorator salt = new src.Models.Decorators.SnookPermit(saltLicense);
-            salt = new src.Models.Decorators.SpinyLobsterPermit(salt);
+            FishingLicenseCore.src.Models.aLicenseComponent saltLicense = new FishingLicenseCore.src.Models.SaltWaterFishBase();
+            FishingLicenseCore.src.Models.LicenseDecorator salt = new FishingLicenseCore.src.Models.Decorators.SnookPermit(saltLicense);
+            salt = new FishingLicenseCore.src.Models.Decorators.SpinyLobsterPermit(salt);
             person.SelectedLicenses.Add(salt.GetType(), salt);
            
         }
@@ -57,16 +58,16 @@ namespace FishingLicense
             double totalSavings = 0;
 
             string t = string.Empty;
-            double lifetimePrice = src.CalculateFactory.CreateInstance<src.Models.LifetimeLicenseBase>().GetPrice();
-            src.Models.IOperator add = src.CalculateFactory.CreateInstance<src.Logic.OperatorAdd>();
-            src.Models.IOperator minus = src.CalculateFactory.CreateInstance<src.Logic.OperatorSub>();
-            src.Models.IOperator multiply = src.CalculateFactory.CreateInstance<src.Logic.OperatorMultiply>();
+            double lifetimePrice = CalculateFactory.CreateInstance<FishingLicenseCore.src.Models.LifetimeLicenseBase>().GetPrice();
+            Calculator.Logic.IOperator add = CalculateFactory.CreateInstance<Calculator.Logic.OperatorAdd>();
+            Calculator.Logic.IOperator minus = CalculateFactory.CreateInstance<Calculator.Logic.OperatorSub>();
+            Calculator.Logic.IOperator multiply = CalculateFactory.CreateInstance<Calculator.Logic.OperatorMultiply>();
 
 
             Console.WriteLine("Hello {0} you're age is {1}", person.Name, person.StartingAge);
             Console.WriteLine("");
 
-            foreach (KeyValuePair<object , src.Models.aLicenseComponent> entry in person.SelectedLicenses)
+            foreach (KeyValuePair<object , FishingLicenseCore.src.Models.aLicenseComponent> entry in person.SelectedLicenses)
             {
                 price +=  entry.Value.GetPrice();
                 t = entry.Key.ToString();

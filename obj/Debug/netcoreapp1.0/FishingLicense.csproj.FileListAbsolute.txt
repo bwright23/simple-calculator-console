@@ -7,3 +7,7 @@ C:\Users\Barry\Desktop\Development\VSCode\FishingLicense\bin\Debug\netcoreapp1.0
 C:\Users\Barry\Desktop\Development\VSCode\FishingLicense\obj\Debug\netcoreapp1.0\FishingLicense.dll
 C:\Users\Barry\Desktop\Development\VSCode\FishingLicense\obj\Debug\netcoreapp1.0\FishingLicense.pdb
 C:\Users\Barry\Desktop\Development\VSCode\FishingLicense\obj\Debug\netcoreapp1.0\FishingLicense.csprojResolveAssemblyReference.cache
+C:\Users\Barry\Desktop\Development\VSCode\FishingLicense\bin\Debug\netcoreapp1.0\Calculator.dll
+C:\Users\Barry\Desktop\Development\VSCode\FishingLicense\bin\Debug\netcoreapp1.0\FishingLicenseCore.dll
+C:\Users\Barry\Desktop\Development\VSCode\FishingLicense\bin\Debug\netcoreapp1.0\FishingLicenseCore.pdb
+C:\Users\Barry\Desktop\Development\VSCode\FishingLicense\bin\Debug\netcoreapp1.0\Calculator.pdb
